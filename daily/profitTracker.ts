@@ -23,6 +23,7 @@ if no items meet the target, return [].
 function profitableItems(day: FoodItem[], targetProfit: number):string[]{
   const profitableItemsList:string[] = []
 
+  // 0(n) solution
   // deconstruct object of items from day
   for (let food of day){
       const name = food.name
@@ -40,9 +41,6 @@ function profitableItems(day: FoodItem[], targetProfit: number):string[]{
   // expense = price * sold
   // net = gross - expense
   // if net > targetProfit, append to profitableItemsList
-
-
-
   return profitableItemsList
 }
 
@@ -58,11 +56,9 @@ const day1 = [
   // test case 2
   const day2 = [
     { name: "donut", cost: 0.6, price: 1.0, sold: 15 },
-    { name: "brownie", cost: 1.0, price: 3.0, sold: 5 },
+    { name: "brownie", cost: 1.0, price: 3.0, sold: 15 },
     { name: "tart", cost: 2.0, price: 5.0, sold: 1 }
   ];
   console.log(profitableItems(day2, 15));
   // expected: ["brownie"]
-  // expected but wrong???
 
- 
